@@ -29,7 +29,7 @@ class App extends Component{
     )
   }
   checkAll = () =>{
-    const updatedTasksAll = axios.post('http://localhost:3001/todo/checkAll').then(
+    axios.post('http://localhost:3001/todo/checkAll').then(
       res => {
         console.log(res.data);
         debugger;
@@ -37,39 +37,34 @@ class App extends Component{
         debugger;
       }
     );
-    console.log(updatedTasksAll);
   }
   toggleTaskCompleted = (id) => {
-    const updatedTasks = axios.post('http://localhost:3001/todo/checkEdit', { id }).then(
+    axios.post('http://localhost:3001/todo/checkEdit', { id }).then(
       res => {
         this.setState({tasks: res.data});
       }
     );
-    console.log(updatedTasks);
   }
   editTask = (id, newName) => {
-    const remainingTasks = axios.post('http://localhost:3001/todo/edit', { id, newName }).then(
+    axios.post('http://localhost:3001/todo/edit', { id, newName }).then(
       res => {
         this.setState({tasks: res.data});
       }
     );
-    console.log(remainingTasks);
   }
   deleteTask = (id) => {
-    const remainingTasks = axios.post('http://localhost:3001/todo/delete', { id }).then(
+    axios.post('http://localhost:3001/todo/delete', { id }).then(
       res => {
         this.setState({tasks: res.data});
       }
     );
-    console.log(remainingTasks);
   }
   addTask = (name) => {
-    const newTask = axios.post('http://localhost:3001/todo/add', { name }).then(
+    axios.post('http://localhost:3001/todo/add', { name }).then(
       res => {
         this.setState({tasks: res.data});
       }
     );
-    console.log(newTask);
   }
   taskList = () => {    
     const tastksState = this.state.tasks
