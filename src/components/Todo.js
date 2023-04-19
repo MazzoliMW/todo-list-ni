@@ -5,7 +5,6 @@ class Todo extends Component{
     super(props);
     this.editFieldRef = React.createRef();
     this.editButtonRef = React.createRef();
-    //this.handleChange = this.handleChange.bind(this);
     this.state = {
       isEditing : false,
       newName : ''
