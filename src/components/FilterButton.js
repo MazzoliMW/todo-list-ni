@@ -6,7 +6,7 @@ class FilterButton extends Component{
     return (
       <button
         type="button"
-        className="btn toggle-btn btn-secondary"
+        className="btn toggle-btn btn-secondary btn-sm"
         aria-pressed={isPressed}
         onClick={() => setFilter(name)}
       >
