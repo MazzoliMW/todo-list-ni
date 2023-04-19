@@ -76,7 +76,7 @@ class Todo extends Component{
               type="checkbox"
               value=""
               id={this.props.id}
-              defaultChecked={this.props.completed} 
+              checked={this.props.completed} 
               onChange={() => this.props.toggleTaskCompleted(this.props.id)}
             />
             <label className="todo-label form-check-label" htmlFor="todo-0">
