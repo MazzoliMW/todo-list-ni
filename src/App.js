@@ -130,7 +130,7 @@ class App extends Component{
             <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
           </svg>
         </button>
-				<h2 id="list-heading" tabIndex="-1" ref={this.listHeadingRef}>{headingText}</h2>
+				<h3 id="list-heading" tabIndex="-1" ref={this.listHeadingRef}>{headingText}</h3>
 				{this.taskList()}
 				</header>
 			</div>

@@ -23,11 +23,9 @@ class Form extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <h2 className="label-wrapper">
-          <label htmlFor="new-todo-input" className="label__lg">
-            Cosa deve essere fatto?
-          </label>
-        </h2>
+        <h3 className="label-wrapper">
+          Cosa deve essere fatto?
+        </h3>
         <div className="btn-group input-group-sm">
           <input
             type="text"

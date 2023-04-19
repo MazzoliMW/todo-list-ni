@@ -41,7 +41,7 @@ class Todo extends Component{
           <label className="todo-label" htmlFor={this.props.id}>
             Nuovo nome per {this.props.name}
           </label>
-      <div class="input-group mb-3">
+      <div className="input-group mb-3">
           <button
             type="button"
             className="btn todo-cancel btn-outline-warning btn-sm"
@@ -74,7 +74,7 @@ class Todo extends Component{
     </form>
   );
   viewTemplate = () => (
-      <div class="input-group mb-3">
+      <div>
         <div className="form-check form-switch">
             <input 
               className="form-check-input"
@@ -88,7 +88,6 @@ class Todo extends Component{
                 {this.props.name}
             </label>
         </div>
-        <div className="spacer2"></div>
         <div className="btn-group">
             <button
               type="button"
@@ -112,6 +111,7 @@ class Todo extends Component{
               </svg> <span className="visually-hidden">{this.props.name}</span>
             </button>
         </div>
+        <div className="spacer2"></div>
       </div>
   );
   render() {
