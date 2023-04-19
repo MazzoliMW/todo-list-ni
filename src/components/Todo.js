@@ -74,8 +74,8 @@ class Todo extends Component{
     </form>
   );
   viewTemplate = () => (
-    <li className="todo stack-small">
-        <div className="c-cb form-check">
+      <div>
+        <div className="form-check form-switch">
             <input 
               className="form-check-input"
               type="checkbox"
@@ -84,7 +84,7 @@ class Todo extends Component{
               checked={this.props.completed} 
               onChange={() => this.props.toggleTaskCompleted(this.props.id)}
             />
-            <label className="todo-label form-check-label" htmlFor="todo-0">
+            <label htmlFor={this.props.id}>
                 {this.props.name}
             </label>
         </div>
@@ -111,11 +111,11 @@ class Todo extends Component{
               </svg> <span className="visually-hidden">{this.props.name}</span>
             </button>
         </div>
-    </li>
+      </div>
   );
   render() {
     return (
-      <li className="todo">{this.state.isEditing ? this.editingTemplate() : this.viewTemplate()}</li>
+      <div className="todo">{this.state.isEditing ? this.editingTemplate() : this.viewTemplate()}</div>
     );
   }
 }
