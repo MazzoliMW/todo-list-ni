@@ -1,7 +1,6 @@
 import './App.css';
 import React, { Component } from "react";
 import Form from "./components/Form";
-//import CheckButton from "./components/CheckButton";
 import FilterButton from "./components/FilterButton";
 import Todo from "./components/Todo";
 import axios from "axios";
@@ -31,10 +30,7 @@ class App extends Component{
   checkAll = () =>{
     axios.post('http://localhost:3001/todo/checkAll').then(
       res => {
-        console.log(res.data);
-        debugger;
         this.setState({tasks: res.data});
-        debugger;
       }
     );
   }
@@ -108,7 +104,6 @@ class App extends Component{
     const conteggio = this.taskList().length;
     const tasksNoun = this.taskList().length !== 1 ? 'rimaste' : 'rimasta';
     const headingText = `${conteggio} attività ${tasksNoun}`;
-    //const prevTaskLength = this.tasks;
     const filterList = FILTER_NAMES.map(name => (
       <FilterButton
         key={name}
