@@ -5,11 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const DATA = [
-  { id: "todo-0", name: "Mangia", completed: true },
-  { id: "todo-1", name: "Dormi", completed: false },
-  { id: "todo-2", name: "Ripeti", completed: false }
-];
+
 root.render(
   <React.StrictMode>
     <App />
